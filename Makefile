@@ -25,8 +25,9 @@ FLAGS		=	-I./include/ -pedantic -g
 CFLAGS		+=	$(FLAGS)
 
 SRC 	=	./src/main.cpp\
+		./src/shell/shell.cpp\
 
-OBJ	=	$(SRC:.c=.o)
+OBJ	=	$(SRC:.cpp=.o)
 
 TOTAL_FILES	=	$(words $(SRC))
 COMPILED_FILES	=	0
@@ -47,7 +48,7 @@ $(NAME):	$(OBJ)
 	@$(CC) -o $(NAME) $(FLAGS) $(SRC)
 	@echo "$(GREEN)✓ Successfully created$(BOLD) $(NAME)$(RESET)"
 
-%.o:		%.c
+%.o:		%.cpp
 	@$(eval COMPILED_FILES=$(shell echo $$(($(COMPILED_FILES)+1))))
 	@$(eval PROGRESS=$(shell echo $$(($(COMPILED_FILES)*100/$(TOTAL_FILES)))))
 	@printf "$(YELLOW)⚡ [%3d%%] Compiling: $(WHITE)%s$(RESET)\n" $(PROGRESS) $<

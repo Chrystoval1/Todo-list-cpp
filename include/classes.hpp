@@ -1,20 +1,20 @@
 /******************************************************
-*  Filename    : todoapp.hpp
+*  Filename    : classes.hpp
 *  Project     : MyToDoApp
 *  Author      : Chrystoval
 *  Description : hpp file for function definition
-*  Created on  : 23-05-2025
+*  Created on  : 26-05-2025
 ******************************************************/
 
-#ifndef TODOAPP_HPP_
-    #define TODOAPP_HPP_
+#ifndef CLASSES_HPP_
+    #define CLASSES_HPP_
 
-#include <cstdio>
-#include <iostream>
+#pragma once
 #include <string>
-#include <string>
-#include "classes.hpp"
 
-int process_user_input(UserInfos infos);
+class UserInfos {
+    public:
+        std::string user_input;
+};
 
 #endif

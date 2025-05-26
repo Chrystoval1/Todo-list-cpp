@@ -1,0 +1,4 @@
+.cache*
+TodoApp
+*.o
+*.json

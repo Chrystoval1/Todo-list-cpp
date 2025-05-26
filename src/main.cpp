@@ -1,20 +1,23 @@
 /******************************************************
-  Filename    : shell.cpp
+  Filename    : Makefile
   Project     : MyToDoApp
   Author      : Chrystoval
   Description : Makefile for the project
   Created on  : 23-05-2025
 ******************************************************/
 
-#include "classes.hpp"
 #include "todoapp.hpp"
-#include <iostream>
 
-int process_user_input(UserInfos infos)
+int main(int ac, char **av)
 {
-    if (infos.user_input.compare("exit") == 0) {
-        std::cout << "exitting program\n";
+    UserInfos infos;
+
+    if (ac > 2)
         return 1;
+    while (1) {
+        std::cout << "TodoApp : ";
+        std::getline(std::cin, infos.user_input);
+        if (process_user_input(infos) == 1)
+            break;
     }
-    return 0;
 }
