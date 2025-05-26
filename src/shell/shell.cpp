@@ -19,7 +19,7 @@ int execute_command(UserInfos infos, std::string command)
 {
     if (command.compare("ADD") == 0 || command.compare("add") == 0)
         add_task(infos);
-    else if (command.compare("HELP") == 0 || command.compare("HELP") == 0)
+    else if (command.compare("HELP") == 0 || command.compare("help") == 0)
         show_help();
     else
         std::cout << "Invalid command" << std::endl;
