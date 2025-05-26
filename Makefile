@@ -24,8 +24,7 @@ CC		=	g++
 FLAGS		=	-I./include/ -pedantic -g
 CFLAGS		+=	$(FLAGS)
 
-SRC 	=	./src/main.cpp\
-		./src/shell/shell.cpp\
+SRC 	=	$(shell find src -name "*.cpp")
 
 OBJ	=	$(SRC:.cpp=.o)
 
@@ -39,7 +38,7 @@ all:		project_logo $(NAME)
 
 project_logo:
 	@echo "$(BLUE)╔═══════════════════════╗$(RESET)"
-	@echo "$(BLUE)║      $(YELLOW)MyTodoApp$(BLUE)        ║$(RESET)"
+	@echo "$(BLUE)║       $(YELLOW)MyTodoApp$(BLUE)       ║$(RESET)"
 	@echo "$(BLUE)╚═══════════════════════╝$(RESET)"
 	@echo ""
 
