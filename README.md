@@ -31,11 +31,11 @@ A simple command-line Todo List application written in C++.
 
 Run the application from the terminal:
 ```bash
-./todoapp
+./TodoApp
 ```
 For help:
 ```bash
-./todoapp -h
+./TodoApp -h
 ```
 
 ## Project Structure
