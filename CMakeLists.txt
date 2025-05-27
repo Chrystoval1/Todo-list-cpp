@@ -4,7 +4,7 @@
 #  Author      : Chrystoval
 #  Description : File for cmake
 #  Created on  : 27-05-2025
-#*****************************************************/
+#******************************************************
 
 cmake_minimum_required(VERSION 3.10)
 
