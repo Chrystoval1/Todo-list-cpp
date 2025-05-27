@@ -28,6 +28,8 @@ typedef struct tasks_s {
  */
 class UserInfos {
     public:
+        int logged_in;
+        std::string user_name;
         std::string user_input;
         std::vector<tasks_t> tasks;
 };

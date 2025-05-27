@@ -19,7 +19,7 @@ int main(int ac, char **av)
 
     if (ac > 2)
         return 1;
-    if (help.compare(av[1]) == 0) {
+    if (av[1] != NULL && help.compare(av[1]) == 0) {
         show_help();
         return 0;
     }

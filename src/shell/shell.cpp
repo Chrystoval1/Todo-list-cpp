@@ -17,6 +17,10 @@
  */
 int execute_command(UserInfos infos, std::string command)
 {
+    if (infos.logged_in == 0) {
+        std::cout << "You are not logged in please login to an existing user or create a new one" << std::endl;
+        return 0;
+    }
     if (command.compare("ADD") == 0 || command.compare("add") == 0)
         add_task(infos);
     else if (command.compare("HELP") == 0 || command.compare("help") == 0)
