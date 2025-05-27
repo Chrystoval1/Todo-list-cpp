@@ -6,7 +6,9 @@
   Created on  : 23-05-2025
 ******************************************************/
 
+#include "classes.hpp"
 #include "todoapp.hpp"
+#include <cstdlib>
 #include <string>
 
 /*
@@ -14,8 +16,9 @@
  */
 int main(int ac, char **av)
 {
-    UserInfos infos;
+    UserInfos *infos = new UserInfos;
     std::string help = "-h";
+    infos->logged_in = 0;
 
     if (ac > 2)
         return 1;
@@ -25,8 +28,9 @@ int main(int ac, char **av)
     }
     while (1) {
         std::cout << "TodoApp : ";
-        std::getline(std::cin, infos.user_input);
+        std::getline(std::cin, infos->user_input);
         if (process_user_input(infos) == 1)
             break;
     }
+    delete infos;
 }

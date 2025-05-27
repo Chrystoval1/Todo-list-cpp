@@ -17,12 +17,13 @@
 /*
  * Core functions
  */
-int process_user_input(UserInfos infos);
+int process_user_input(UserInfos *infos);
 
 /*
  * Command handling funtions
  */
-void add_task(UserInfos infos);
+void add_task(UserInfos *infos);
 void show_help(void);
+void login_user(UserInfos *infos);
 
 #endif
