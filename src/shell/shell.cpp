@@ -6,11 +6,7 @@
   Created on  : 23-05-2025
 ******************************************************/
 
-#include "classes.hpp"
 #include "todoapp.hpp"
-#include <iostream>
-#include <string>
-#include <sstream>
 
 /*
  * Function to handle the command execution
@@ -21,6 +17,10 @@ int execute_command(UserInfos *infos, std::string command)
         login_user(infos);
         return 0;
     }
+    if (command.compare("HELP") == 0 || command.compare("help") == 0) {
+        show_help();
+        return 0;
+    }
     if (infos->logged_in == 0) {
         std::cout << "You are not logged in please login to an existing user or create a new one" << std::endl;
         return 0;
@@ -29,8 +29,8 @@ int execute_command(UserInfos *infos, std::string command)
         add_task(infos);
         return 0;
     }
-    if (command.compare("HELP") == 0 || command.compare("help") == 0) {
-        show_help();
+    if (command.compare("LIST") == 0 || command.compare("list") == 0) {
+        list_tasks(infos);
         return 0;
     }
     std::cout << "Invalid command" << std::endl;

@@ -7,7 +7,6 @@
 ******************************************************/
 
 #include "todoapp.hpp"
-#include <iostream>
 
 /*
  * Helper function to show the commands available

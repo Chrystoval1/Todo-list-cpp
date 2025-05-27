@@ -6,12 +6,7 @@
   Created on  : 26-05-2025
 ******************************************************/
 
-#include "classes.hpp"
 #include "todoapp.hpp"
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <regex>
 
 /*
  * Function to check if the given string respects the date format
@@ -35,6 +30,10 @@ void add_task(UserInfos *infos)
 
     iss.ignore(infos->user_input.find(' ') + 1);
     iss >> task_name;
+    while (task_name.compare("add") == 0 || task_name.compare("ADD") == 0 || task_name.compare("\0") == 0) {
+        std::cout << "Please enter a task name : ";
+        std::getline(std::cin, task_name);
+    }
     new_task.task_name = task_name;
     std::cout << "Creating " + new_task.task_name << std::endl;
     while (!check_date(start_date)) {
@@ -53,4 +52,5 @@ void add_task(UserInfos *infos)
     new_task.end_date = end_date;
     new_task.owner_name = infos->user_name;
     infos->tasks.push_back(new_task);
+    std::cout << "Task " + task_name + " created successfully" << std::endl;
 }

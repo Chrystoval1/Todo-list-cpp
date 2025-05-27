@@ -6,10 +6,7 @@
   Created on  : 27-05-2025
 ******************************************************/
 
-#include "classes.hpp"
 #include "todoapp.hpp"
-#include <iostream>
-#include <string>
 
 void login_user(UserInfos *infos)
 {

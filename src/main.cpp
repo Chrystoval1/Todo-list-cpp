@@ -6,10 +6,7 @@
   Created on  : 23-05-2025
 ******************************************************/
 
-#include "classes.hpp"
 #include "todoapp.hpp"
-#include <cstdlib>
-#include <string>
 
 /*
  * Main function of te project

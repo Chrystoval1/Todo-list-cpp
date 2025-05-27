@@ -13,6 +13,8 @@
 #include <string>
 #include <string>
 #include "classes.hpp"
+#include <regex>
+#include <sstream>
 
 /*
  * Core functions
@@ -25,5 +27,6 @@ int process_user_input(UserInfos *infos);
 void add_task(UserInfos *infos);
 void show_help(void);
 void login_user(UserInfos *infos);
+void list_tasks(UserInfos *infos);
 
 #endif
